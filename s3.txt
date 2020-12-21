@@ -63,6 +63,59 @@ D: 21/12/2020
 
 https://join.slack.com/t/awswithavinash/shared_invite/zt-ka9bd5ki-3ZS5DlrRVXY6_qnmS4eJ4Q
 
+https://github.com/avizway1/dec2020
+
+
+Versioning : 
+--> It keeps all the versioned objects.
+--> Upload time is matter here.
+
+Versioning : HIDE
+--> If we accidentally delete the object, We will get "DELETE Marker". We can delete the DM to get the object back.
+
+Versioning : SHOW
+--> If we delete any Object, It deletes perminently. We cannot get the object back.
+--> If we want to delete any SPecific version, Set Version:SHOW, then delete.
+
+
+
+Lifecycle Management Rule : 
+
+
+Free Tier : 5 gb Standard Storage Class.. 
+2000 PUT (Upload)
+20,000 GET (Download)
+
+
+
+Storage classes
+versioning
+lcr
+encryption
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
