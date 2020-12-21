@@ -1,0 +1,432 @@
+D: 08/12/2020
+
+Cloud COmputing : 
+
+NIST : 
+
+COmputing resources: 
+	--> Storage : hdd
+	--> Memory  : ram
+	--> Compute : cpu
+	--> Network : nic , wifi, bt
+	--> Application : av, msooffice
+	--> Services : OS
+
+aws : Instance = Server
+azure : azure VM
+GCP : GCP ENgine
+server = box
+
+XEN / Nitro : Hypervisor
+
+On-Demand: 
+
+Pay-as-you-go : Pay for what exactly resource you use.. 
+
+1gb ram, 30gb hdd, 2 vcpu... x 15 days
+2gb ram, 50gb hdd, 4 vcpu.. x 1 day
+16gb ram, 1 tb hdd, 16 vcpu.. x 2 days
+= 18 days
+
+IBM sametime : Communicator / messenger for internal communication
+
+
+80th Batch : 
+--> Does this course required any IT exp.?
+NO.. Novoice..  I'll make you to understand the subject.
+95% Hands-on.. 
+--> Slack channel : 
+
+--> Do i need to learn Linux.?
+Basic linux required... As part of the course.. WIndows and Linux.. 
+Learn : Free Linux COurse designed by me.. AWS..!!
+Jenkins on AWS : DevOps : 
+GIT : 
+
+--> AM a .net developer / java developer / python..!! Does this course helps me..??
+Yes..  CDK (Cloud development kit) : Workshop on cdk.. ++
+
+--> Am a Admin/ operational side (dba, sa, network, sysadmin):
++++++ : 
+
+
+--> Does this course covers any certifications..?
+ANs : 4 Certs: 
+	--> SA-A
+	--> Developer
+	--> SysOps
+	--> Cloud Practitioner
+
+Project: Yes.. But.. AWS Service based cloud.. 
+--> We will take a session on real environment..!!!!!  
+
+
+How much exp i can add to my profile.
+--> 3.5 - 4 Yrs exp on AWS. 
+
+
+______________________________________________________________________________________
+D: 09/12/2020
+
+ROI :
+
+Capital expendature : Build a Data center.. 100% upfront..  No CAPEX in cloud
+Operational Expendature : Less OPEX... Recruit candidates who can builod your infra in cloud.. 
+
+Pay-as-you-go: Pay for what you use..!!
+
+
+DEPLOYMENT MODELS :
+
+Public cloud : Open for everyone.. Anyone can create an Account and provision resources..
+Maintenance: Service Provider : AWS, Azure, GCP, Oracle cloud, alibaba, IBm cloud....
+
+Private cloud  :  Dedicated for one Organization.. It'll be available to one org only..
+Maint: Same org.. / 3rd party org.. 
+
+Hybrid cloud : Combination of one or more cloud platforms.. Pub+pub.. Pub+private
+On-Prem + aws = enable communication (VPN / Direct Connect / outpost)
+aws + azure..  Main: Depends.. 
+webservers in AWS + run your db in azure.. microsoft sql
+gcp + back/db/web/cdn
+
+Community cloud : Group of org, raise funds and build the infra.. uses the infra.. 
+Only group of org, can access the resources.. 
+Main: one of the org from community.. / 3rd party org.. 
+
+_______________________________________________________________________________________
+
+D: 10/12/2020
+
+Service Models of CLoud COmputing: 
+
+Traditional On-Prem : 
+
+SaaS : Lightsail : 
+PaaS : Beanstalk : 
+IaaS : ec2 : 
+
+Requirement : Need a Website..!!
+
+
+application	--. End Customer
+data		--> SA
+runtime		--> Application Admin
+middleware
+o/s		--> System Admin
+virtualisation	--> Vmware/jhyperv
+servers		--> System Engineers
+storage		--> Storage Admin (SAN / NAS)
+database	--> DBA
+network		--> Switches, routers, firewall : Network Admins
+
+
+power / ups
+cooling
+security
+
+
+_____________________________________________________________________________________
+D: 11/12/2020
+
+Amazon CEO : Jeff Bejos
+AWS CEO : Andy Jessy
+
+2004: CHris pinkman and Benjaminblack whitepapers how to sell a service.. SQS.. 
+AWS : March, 2006..  (SQS, S3, ec2)
+
+AWS Annual Conference : re:Invent.. 
+
+Revenue: 35 billion $
+
+
+AWS Global Infrastructure: 
+
+
+Regions: No Technical defination.. Physical location/Geographical location.. 
+--> 24 Launched Regions		(20 for everyone)
+	2 --> China (nwcd, sinnit) 
+	2 --> Us-gov-cloud  (pci dss, fedramp, hippaa)
+--> Mumbai : ap-south-1
+
+
+Availability Zones / AZ : Data Centre / combination of multiple DC.. 
+--> Mumbai : ap-south-1a, ap-south-1b, ap-south-1c
+
+PoP/Edge Locations : CDN Endpoints : Content Delivery Network.. : Cache Locations: Cloudfront
+230+ Edge locations.. 
+
+
+Expires in 3 days..
+
+https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=DE2020
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=DE2020
+
+
+_________________________________________________________________________________________
+
+D: 15/12/2020
+
+https://aws.amazon.com/free
+
+Free Tier Elibility : 
+
+IAM : Identity and access management : Create user and manage users..  : FREE Always
+
+S3 : Simple Storage Service : Storage service (upload/download/share data) : 5 gb standard storage free : Bucket (DIrectory/folder)
+
+ec2 : Elastic Compute cloud : Compute service (Launch & manage servers) :
+	750 Hrs/Month Windows t2.micro (1vCPU, 1 RAM)
+	750 Hrs/Month Linux t2.micro (1vCPU, 1 RAM)
+
+RDS : Relational Database Service : (Launch /manage Databases) : 	
+	750 Hrs/Month db.t2.micro (mysql/msssql/oracle/postgresql/mariadb)
+
+VPC : Virtual private Cloud : Network Service (Create n/w, configure) : Free
+
+
+sandbox / sandpit : Palyground
+Non Production : 
+Staging environmrnt : Pre-Prod :
+Production environment :
+
+_____
+
+Email Address : 			--> root user			-
+Password & COnfirm password		--> Strong and secure
+Account Name	
+
+
+Contact Information :							 
+--> Professional
+--> Personal
+name, address
+
+
+Payment Information: 2 INR.. CC/DC.. Refunded.. 
+--> Visa / Master Card / AMEX
+Card Number, Card Name, Expiry date , cvv.. 				
+
+Verify identity:
+--> Captcha
+--> Phone verification / Email verification : 00000000 --> Call me now --> XXXX --> Enter this 4 digit pin in the IVR call.. 
+
+Select a Support Plan : 
+
+1) Account and Billing related : 24x7, Free for all SP
+2) Soft Limit increase : 24x7, Free for all SP
+3) Technical Support 
+
+Basic SP : 1 & 2 Free 24x7.. 3 --> NO technical SUpport.. AWS Documentations, support/developers forums.. 
+
+Developer SP : 1 & 2 Free 24x7.. 29$/Month.. 3 -> Email support from Cloud support associate with Business hours.. 12-24 local business hours.. 1 Primary contact can create tickets/unlimited tickets.. 
+Case severity:
+General Guidelines : < 24 Hrs
+System Impaired : <12 Hrs
+
+Business SP : 1 & 2 Free 24x7.. 100$/Month.. 3 -> Phone, Email and Chat support From CLoud support engineer.. Unlimited users/unlimited tickets.. 
+With in 1 hr.. 
+Case severity:
+General Guidelines : < 24 Hrs
+System Impaired : <12 Hrs
+Production System Impaired : < 4 Hrs
+Production System Down : < 1 Hr
+
+
+Enterprise SP : 1 & 2 Free 24x7.. 15,000$/Month.. 3 -> Phone, Email and Chat support From CLoud support engineer.. Unlimited users/unlimited tickets.. 
+--> TAM (Technical Account Manager)
+--> Annual Architectural reviews and Operational reviews.. 
+Case severity:
+General Guidelines : < 24 Hrs
+System Impaired : <12 Hrs
+Production System Impaired : < 4 Hrs
+Production System Down : < 1 Hr
+Business Critical System Down : < 15 Minutes
+
+_____________________________________________________________________________________
+
+D: 16/12/2020
+
+
+root : email and password --> Highest permissions on AWS account..
+
+Post-CLosure period : 90 days..
+
+--> Enable Free-Tier usage alert.. (My Account --> Preferences --> Billing pref)
+
+MFA : My Security credentials --> 
+Virtual MFA device : Mobile applications : Google authenticator / MS Authenticator.. 
+
+___
+
+
+Storage Admin : S3  : 
+System Eng    : EC2 : 
+Network Admin : VPC : 
+Team Lead : Admin Access : 
+
+
+IAM User : Identity and access management : 
+
+--> Always provide Least privilages to perform the job. 
+
+
+Username : avinash
+
+Select AWS access type
+ --> Programatic Access : CLI : AccessKeyID & SecretAccessKey : API/SDK/CLI... 
+ --> AWS Management console access : GUI : Username, Password & Sign-In : Browser..
+
+Set permissions:
+Policy : DOcument contains set of Permissions on our AWS account. THis document writtens in JSON format.
+
+ONly S3 Access Required for AVinash : S3FullAccess
+
+Add Tags
+
+Review and Create.. 
+
+
+
+
+Task : ENable MFA on your root account.
+
+Task 2 : Create an IAM User with "AdministratorAccess" policy. Login and Verify your access on ec2 and s3.
+--> Try to access the Billing information..!!!!    YES/NO.?  : NO..
+--> Provide Billing access to an IAM user..!! 
+
+Task 3 : Activate MFA for IAM Users.??
+
+Task 4 : How to reset an IAM user password..??
+
+
+_______________________________________________________________________________________
+
+D: 18/12/2020
+
+
+--> AWS Managed Policy - Job FUnction
+--> AWS Managed Policy 
+--> Customer Managed 
+
+--> "Deny" will have always highest priority.
+
+
+Allow ec2 and s3 : 
+
+Service : s3 
+Actions : all actions
+Effect : Allow / Deny
+Resources : All Resources.. 
+
+
+Allow s3 and deny s3 : DENY
+
+
+Credentials Report : 
+
+arn : Amazon Resource Name : 
+
+Tracking USer Activity : --> CloudTrail : 
+Cloudtrail : Logging service.
+--> Enabled defaultly in all AWS accounts.
+--> It stores last 90 days logs. 
+
+
+Task : Create an IAM User, "AdministratorAccess".
+
+Task 2 : Create an IAM User and provide s3 full access,  
+--> He needs to enable MFA himself.   For that operation, Create an IAM Policy to Activate MFA.
+
+____
+
+Permissions Boundary : Max set of pertmissions that IAM user gets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

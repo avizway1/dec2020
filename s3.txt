@@ -1,0 +1,80 @@
+____________________________________________________________________________________
+
+D: 19/12/2020
+
+S3: SImple Storage Service : 
+
+object based storage : Store the flat files (.pdf.docx.exe.msi).. We cannot install OS/Run any applications.. : S3
+
+Block Based Storage : Designed to run OS.. EBS / Instance Store..
+
+Storage Over Network : SAN/NAS.. We 'll have storage within the network.. We can mount it servers.. : EFS / FSx
+
+
+--> We store all the data in Buckets.
+--> Bucket = Directory / Folder with Unique name space. 
+--> Bucket name must be unique across the globe.
+--> Bucket naming limits (COmply DNS Naming standards)
+	--> Min 3 char.. Max 63 Char
+	--> Name should not start with . 
+	--> Name should not end with .
+	--> No Adjesent ..
+	--> SHould not Resemble IP address format
+	--> No Capital letters.. 
+	--> Should not start with xn--
+
+--> IAM and S3 is a Global Platform, Doesn't required to choose the region.
+--> But whenever we are cretaing a bucket, We need to choose the region.
+--> We store all the objects in Bucket.
+
+
+Block public access (bucket settings) --> Must be turned off to make any object public.
+
+If we don;t have . in bucketn name..
+Syntax : https://bucketname.s3.regioncode.amazonaws.com/objectname
+
+If we have . in bucketn name..
+Syntax : https://s3.regioncose.amazonaws.com/bucketname/objectname
+
+
+
+S3 Storage Classes
+
+S3 Standard : availability : 99.99% , Durability : 99.999999999 %.. Frequently accessed data..   >= 3 AZs.. 
+
+Standard-IA : availability : 99.9% , Durability : 99.999999999 %.. Designed to store Infrequently accessed data.. Data will be available immediatley..  >= 3 AZs.. 
+
+Onezone-IA : availability : 99.5% , Durability : 99.999999999 %.. Designed to store Infrequently accessed data, non-critical data.. Data will be available immediatley..  1 AZs.. 
+
+Glacier : TO archieve data for longer durations.. We cannot view the data immedialtly.. We need to retrive the data..  Long-term data archiving with retrieval times ranging from minutes to hours.. >3 AZs
+
+Glacier Deep Archieve : TO archieve data for longer durations.. We cannot view the data immedialtly.. We need to retrive the data.. Long-term data archiving with retrieval times within 12 hours.. >3 AZs
+
+Intelligent Tier : Long-lived data with changing or unknown access patterns.. If we are not sure to choose the storage class.. 
+
+RRS (Reduced renduncy storage) : Durability is less.. 99.99%.. Not recpmmended.. Easily reprodusable data.. Non-Mission critical data.. 
+
+https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html
+
+________________________________________________________________________________________
+
+D: 21/12/2020
+
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-ka9bd5ki-3ZS5DlrRVXY6_qnmS4eJ4Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
