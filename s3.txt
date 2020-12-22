@@ -87,11 +87,44 @@ Free Tier : 5 gb Standard Storage Class..
 20,000 GET (Download)
 
 
+_____________________________________________________________________________________
 
-Storage classes
-versioning
-lcr
-encryption
+D: 22/12/2020
+
+CRR / SRR : Cross Region Replication / Same Region Replication : 
+
+--> Before enableing CRR/SRR, WHatever the data we have, that doesn'r replicate automatically. All future / subsequent uploads will replicate.
+
+--> aws s3 sync sourcebucket destinationbucket
+
+
+MFA Delete on S3 Bucket : TO add additional layer to delete object.
+
+
+Tags : Customer provided metadata. 
+Project Name : Project X
+
+
+Intelligent-Tiering Archive configurations : It moves the data to Archive / Deep Archive automatically if data is not accessed in last 90 days / 180 Days.
+
+Server Access Logging : Won't use this..!!! : Enable logging on one s3 bucket. 
+
+
+Event notifications : 
+--> SQS
+--> Lambda
+--> SNS (SImple Notification Service)
+
+
+SNS : Create a Topic : Add subscribers --> Configure this SNS on S3 bucket.
+
+
+Task : COnfigure Same Region Replication on S3.
+
+Task 2 : COnfigure Notifications if an object is deleted.
+
+Task 3 : Configure a billing alarm on your aws account with the created SNS topic.
+
 
 
 
