@@ -117,6 +117,7 @@ Event notifications :
 
 
 SNS : Create a Topic : Add subscribers --> Configure this SNS on S3 bucket.
+** SNS topic and S3 Bucket should be in same region.
 
 
 Task : COnfigure Same Region Replication on S3.
@@ -124,6 +125,55 @@ Task : COnfigure Same Region Replication on S3.
 Task 2 : COnfigure Notifications if an object is deleted.
 
 Task 3 : Configure a billing alarm on your aws account with the created SNS topic.
+
+______________________________________________________________________________________
+
+D: 24/12/2020
+
+Encryption : 
+
+In-Transit Encryption : SSL / TLS 
+
+
+Server Side Encryption (SSE) / At-Rest : AWS Responsibility..
+
+--> SSE-S3 : S3 Generatres and manages the keys to encrypt and decrypt the data. Who ever have S3 access they can decrypt the data.
+
+--> SSE-KMS : Key Management Service : 
+	aws/s3 : KMS generates and manages the Key and Key Material. WHoever have access 		on s3, they can encrypt/decrypt the data. * FREE TIER (20k req/Month)
+KMS-CMK : Customer managed keys : Using KMS customer need to generate the 			encryption keys.. KMS manages the key and key material.. **NO FREE TIER
+Whoever want to decrypt the data, he needs permission on encry key.
+
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations.
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
+
+--> SSE - C (Client Provided) : We need to upload the key material to kms and KMS manages the Key material and encrypts the data.
+
+
+Key Creation: Choose Symmetric / Asymmetric : Symmetric
+Key ALias and Descryption
+Key administrators : Who can manage the Key.
+key usage permissions : Who can use this key.  : 
+
+
+
+Client SIde Encryption :  
+--> Customer Not ready to share/upload his key material to AWS.
+--> Whoever don;t want to Send any unencrypted data to s3.
+--> AWS not responsible for tis CSE.
+
+
+
+--> We can create only 100 buckets. (Soft Limit)
+
+
+
+
+
+
+
+
+
 
 
 
