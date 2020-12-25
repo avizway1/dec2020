@@ -166,6 +166,47 @@ Client SIde Encryption :
 
 --> We can create only 100 buckets. (Soft Limit)
 
+________________________________________________________________________________________
+
+D: 25/12/2020
+
+
+Transfer acceleration : **NO FREE TIER : 
+
+Object Lock : 
+--> For existing bucket we cannot enable Object lock. If required We need to contact aws.
+--> Versioning must be enabled to use obkect lock.
+
+Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
+
+Compliance : No users can overwrite or delete protected object versions during the retention period.
+
+Requester pays : Instead of bucket owner, whoever access the data, he needs to pay / we'll get charged for the data transfer and requests.
+
+
+Static website hosting : We can host a static website using s3 bucket.
+--> DOmain Name = Bucket Name
+
+Http STatus Codes :
+2XX : OK / SUccess
+3XX : Redirection 
+4XX : CLient Side Error
+5XX : Server Side Error
+
+Metrics : 
+--> Cloudwatch : Monitoring service on AWS. 
+--> CW gives metrics/graphs on resources.
+--> 
+
+
+
+
+
+
+
+
+
+
 
 
 
