@@ -199,21 +199,53 @@ Metrics :
 --> 
 
 
+_______________________________________________________________________________________
+
+D: 26/12/2020
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=DEC202
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=DEC202
+
+https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
 
 
+Bucket Policies : JSON Format.
+--> We can manage permissions at Resource level. 
 
 
+ACL : 
+Public ACcess : 
+ANother AWS Acount user :S3 Cananical ID required to share with another AWS Account users. 
+Log Delivery group
 
 
+IAM User : avinash : Deny Upload Object to Avinash121 bucket..??
 
 
+https://awspolicygen.s3.amazonaws.com/policygen.html
 
 
+Effect : ALLOW / DENY			: Deny
+Principal : TO an IAM User arn	 	: arn:aws:iam::518084852393:user/avinash
+Actions : What operation want to deny	: PutObject (Upload)
+Amazon Resource Name : on what s3 buck	: arn:aws:s3:::avinash121/*
+
+s3 bucket : 
+Bucket level operation Just give Bucket ARN : arn:aws:s3:::avinash121
+Object level operation we need to add *		: arn:aws:s3:::avinash121/*
 
 
+Import / Export : 
+Snow Family deviuces :
+	--> SnowCOne : 8 TB
+	--> Snowball edge : 42TB / 100TB 
+	--> Snow Mobile : PB scale container  : 1 Pb data with 1gbps.. 23-25 Years
+
+--> AWS Direct Connect : We can establish dedicated connectivity between AWS regions and On-Premise.
 
 
-
+3rd Party Apploication : Cloudberry explorer / S3 Browser / WinSCP / Cyberduck..!!
 
 
 
