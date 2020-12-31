@@ -1,0 +1,125 @@
+EC2 : Elastic Compute Cloud : 
+	+/-   cpu, memory, storage, network.. AWS
+
+Project : POC : 
+
+Infra + hardware + 100% upfront = switches, server rack, network rack, kvm switches, power connectivity, Coolinf, Security, Firewalls.. 
+
+poc : 10 servers = x (Pay as you go)
+
+
+Instances = Server = Azure VM = VM = GCP Engine = Box
+terminate = Delete
+
+On-Demand ec2 Instance : Non PRedictable usages, Non Predictable workloads.. Test temp.. 
+Pricing : /Sec (Min of 60 Sec).. /Hr.. 
+
+Reserved ec2 Instances : Stable workloads, Predictable uses.. Long term runs.. 
+Duration : 1 Yr / 3 Yrs
+	Standard RI : We cannot change the configuration..
+	Convertable RI : We can change the config.. 
+	Scheduled RI : For persistant/repeated req.
+
+Pricing : 
+	FUll Upfront : Pay 100% while purchasing
+	Partial Upfront : Pay 30-50% while purchasing.. 								Pay remaining amount (used)monthly..	
+	No Upfront : Pay everything monthly basis.. 
+	
+
+Spot Instances : We don't run Production worklods.. Test your application.. 
+--> If we have flexible start / start for our application.. 
+Bid your own pricing against AWS pricing.. If your quoted price is equal or greater than AWS price.. We will get the instance.. 
+If price is increased, AWS Terminates the instance. 
+
+AWS Pricing History : Help to quote the pricing
+Spot fleet : Max Pricing 
+
+--> If Price increase, AWS terminated our instance, we no need to pay for partial hours.
+--> If price not increase, YOU terminated instance, We need to pay full usage cost.
+
+
+1 hr 45 Min : AWS Terminated : 1 hr.. 
+1 hr 45 Min : You Terminated : 1 hr 45 Min.. 
+
+_____________________________________________________________________________________
+D: 31/12/2020
+
+ec2 is a region specific service.. 
+Mumbai.. N Virginia..
+
+
+Step 1: Choose an Amazon Machine Image (AMI): Amazon Linux 2 AMI : Template of an OS with required app and services.. 
+	--> Quickstart
+	--> MyAMI : CUstomisedAMI
+	--> MarketPlace : buy/sell application/services/os. 
+	--> COmmunityAMI
+
+Step 2 : Choose Instance Type : t2.micro (Free Tier)
+
+General Pupose : t2, t3, m4, m5 : GIves stable performance for all the resources.. 
+COmpute optimised : c4, c5, c6 : Gives more compute powers
+Disk Optimised : i2, i3 : Gives more Storage performances : (Input and Ouput operations per second)
+Memory optimised : r4, r5, r6, x1 : GIves more memory perf : (RAM)
+GPU Instances : P, G : More Graphic perf.. 
+
+Step 3: Configure Instance Details
+
+Shutdown behavior : STOP / Terminate	: stop
+Enable termination protection : yes
+
+Step 4: Add Storage : Go with 8 gb.. 10gb for ubuntu
+
+Step 5: Add Tags
+Name : 
+Application :
+Platform :
+COst Center : 
+
+Step 6: Configure Security Group : Firewall at Instance level.
+Port : 0-65536
+
+Linux : SSH (Secure Shell) : 22
+WIndows : RDP (Remote Desktop Protocol) : 3389
+http : 80
+https : 443
+mssql : 1433
+MySQL : 3306
+
+
+Step 7 : Review, Create Keypair and Launch instance.
+KeyPair : Encryption and Decryption.. WOrks with Publickey and privatekey
+	AWS Keeps the PublicKEy
+	We gets the PrivateKEy.. TO get connected to instance.. We need to browser the 	PrivateKEY against ouyr ec2 instance.. 
+
+
+Windows Desktop USers :
+1. Windows Command Prompt : Install "OpenSSH" then use "CMD"
+2. Windows : Install "GIT for Windows" : Git Terminal and connect to instance
+3. Putty : Download and Instal Putty : ** Putty don't support .PEM format so We need to    convert the .PEM to .ppk format.
+4. MobaXterm : Here also we required .ppk format only.
+
+Linux Desktop : Open terminal and connect to instance.
+ssh -i KEYPAIR ec2-user@PUBLICIP
+
+Permissions error : MAC :  chmod 400 Keypair.pem
+
+
+Task : Launch Linux INsyance and connect to it without any error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
