@@ -248,8 +248,16 @@ Snow Family deviuces :
 3rd Party Apploication : Cloudberry explorer / S3 Browser / WinSCP / Cyberduck..!!
 
 
+___________________________________________________________________________________
 
+D: 30/12/2020
 
+Peformance : Prefix 
+
+3500 PUT / Uploads per prefix
+5500 GET / Downloads per prefix
+
+--> Add randomness in the Object names and Prefixes.. 
 
 
 
