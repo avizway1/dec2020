@@ -106,9 +106,32 @@ Permissions error : MAC :  chmod 400 Keypair.pem
 
 Task : Launch Linux INsyance and connect to it without any error.
 
+______________________________________________________________________________________
+
+D: 02/01/2021
+
+We use Keypair to Generate the password.
+Ec2 instances copies with PublicKey.. We have Privatekey.. 
+
+open run --> mstsc --> Privide IP address and password
 
 
+Security Groups : FIrewall at Instance Level.
 
+--> We must open ports to get connected to instance (WIndows: 3389 / Linux:22)
+--> If we make ur instance as webserver must open open the port (http: 80 / https:443)
+
+inbound: What you want to deliver from ec2 instance. 
+outbound : What you want to access within ec2 instance. (0.0.0.0/0)
+
+Anywhere : 0.0.0.0/0
+
+CHanges to the Security Group takes effect immediately.
+No need to perform stop/start.. No need to reboot.. 
+
+C:\inetpub\wwwroot
+
+Task : Launch windows ec2 instance and make it as webserver. How security group works.
 
 
 
