@@ -208,14 +208,26 @@ Enter :wq
 Task : Launch an ec2 instance, Add 2gb volume.. make it available.. Add entry in fstab.
 
 Task 2 : Add 1 more gb to existing 2gb volume.. How to extend..!!!
+df -Th  --> Grab the Mount point / Device name
+xfs_growfs -d /mountpoint
+_______________________________________________________________________________________
+
+D: 05/01/2021
 
 
+Filesystems : Linux ect3, ext4, xfs
+Windows : FAT16, FAT32, NTFS, ReFS
+
+--> Decreasing volume size is not possible. 
+--> Instance and VOlumes should be in same AZ. If our Volume is in another AZ we cannot mount it directly. 
 
 
+Snapshot : Backup copy of our EBS volumes.
+From a SS we can create multiple copies of the volumes in Diff AZs.
+--> SS : Point-in time copies.. 
 
 
-
-
+DLM : Data LifeCycle Manager : SNapshot Manager : 
 
 
 
