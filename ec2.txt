@@ -229,6 +229,43 @@ From a SS we can create multiple copies of the volumes in Diff AZs.
 
 DLM : Data LifeCycle Manager : SNapshot Manager : 
 
+______________________________________________________________________________________
+
+D: 06/01/2021
+
+To know the existing volume file system information : file -s /dev/xvd*
+mount /dev/xvdf /foldername
+
+
+10 ec2 instance.. Install with webserver.. Custom Data.. install some applications.. 
+
+Launch 1 instance : Customise all the settings : Prepare a GoldenAMI : From this GAMI, we can launch N number of the ec2 instance.. --> all cu
+
+
+Apache : yum install httpd
+Nginx : yum install nginx
+
+rpm : redhat package manager :  
+yum : Yellowdog update manager : 
+
+
+yum install httpd -y
+service httpd status/start/stop/restart
+chkconfig httpd on
+cd /var/www/html/
+
+/var/www/html/ --> Apache Doc root path.. Create/place all your webpages.. 
+for File transfer : WinSCP 
+
+Editors : vi, vim , nano
+
+VIM Editor:
+
+vim index.html	
+Press I		--> INSERT Mode
+Press ESC	--> Takes out from INSERT Mode
+:wq		--> Write changes to file and Quit the editor
+:q!		--> Don't Write changes to file and Quit the editor
 
 
 
