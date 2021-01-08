@@ -268,6 +268,87 @@ Press ESC	--> Takes out from INSERT Mode
 :q!		--> Don't Write changes to file and Quit the editor
 
 
+_____________________________________________________________________________________
+
+D: 07/01/2021
+
+
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>THis is a BSS Webserver</h1>" >> /var/www/html/index.html
+
+FOr Vertical Scaling.. We need to stop the ec2 instance.. Configuration upgradation/downgradation.. 
+
+
+Stop and Start instance will change the Instance Public IP Address, Not Private Address.
+Reboot operation won;t change the public IP address.
+
+EIP : Elastic IP Address : We can geenrate an EIP and Associate to ec2 instance. It won;t wont if we perform stop/start. 
+
+ENI : Elastic Network Interface : NIC card for ec2 instance : 
+Instance and ENI must be in same Subnet/AZ. 
+
+Shared Tenancy : Underlying resources shared with multiple Customers.
+Dedicated tenancy : Underlying h/w won't share with anyone.
+	Dedicated Instance : less visibility.
+	Dedicated Host : More visibility, We can apply licenses at h/w level (CPU).
+https://aws.amazon.com/ec2/dedicated-hosts/
+
+
+We have 2 status checks on our ec2 instance.. 
+Instance Status Check : reboot works most of the times.. Get system logs to inspect more.
+System Status check : stop and start instance to fix this issue.
+
+
+Instance Store Volumes : Ehemeral storages.. Temp storages.. 
+--> We cannot stop/start ec2 insatnce.. 
+--> If underlying instance failure happens, we will loss all the data. 
+--> No Free Tier Eligibility. 
+
+Task : Launch a Windows 2016 Instance, Change the password, CHange wallpaper, Install Putty, Install IIS with custom Webpage.. --> 
+	--> Create a GoldenAMI of this instance, Launch an ec2 instance from GAMI. Verify all the settings.. Keypair generated password works or not..????
+
+_____________________________________________________________________________________
+
+D: 08/01/2021
+
+
+Userdata executes when we launch our ec2 instance. 
+
+#cloud-config : to execute commands after every reboot
+Windows : <persist>true</persist>
+
+
+curl http://169.254.169.254/latest/user-data/
+
+<script>commands </script>
+<powershell> </powershell>
+
+Install-WindowsFeature -name Web-Server -IncludeManagementTools
+
+curl http://169.254.169.254/latest/meta-data/
+
+
+Load Balancing : 
+--> Vertical Scaling
+--> Horizantal Scaling 
+
+
+CloudWatch : Service to monitor the resources.  (cpu, disk, network).. We cannot monitor Memory (RAM) usage with default metrics..
+
+Basic Monitoring : 5 Minutes interval   : free
+Detailed Monitoring / Enhanced Monitoring : 1 Minutes : Costus
+
+Vertical scaling : we need to perform manually. 
+
+
+
+
+
+
+
 
 
 
