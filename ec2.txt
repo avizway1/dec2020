@@ -343,6 +343,36 @@ Detailed Monitoring / Enhanced Monitoring : 1 Minutes : Costus
 
 Vertical scaling : we need to perform manually. 
 
+________________________________________________________________________________________
+
+D: 11/01/2021
+
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>THis is my webserver 8080</h1>" >> /var/www/html/index.html
+
+ELBs :
+--> Classic ELB : http, https, tcp, udp... (Previous Generation)
+--> Application ELB : http and https
+--> Network ELB : tcp, udp, tcp_udp, tls.. 
+
+
+Internal / internet facing : 
+
+Access Logs : S3 bucket
+
+free Tier : 750 Hrs/Month.. 1 ELB.. 12 Months.. 
+
+
+
+
+
+
+
+
+
 
 
 
