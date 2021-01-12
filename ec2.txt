@@ -365,6 +365,35 @@ Access Logs : S3 bucket
 
 free Tier : 750 Hrs/Month.. 1 ELB.. 12 Months.. 
 
+________________________________________________________________________________________
+
+D: 12/01/2021
+
+ASG : 
+
+--> Create a GoldenAMI
+--> Create an ELB
+--> Create an ASG
+	--> Create an Launch COnfiguration
+	--> Create an ASG
+
+WHen "Scale In" triggered : Remove an EC2 instance.
+When "Sclae Out" triggered : Add an ec2 instance.
+
+Target Tracking scaling policy : AWS Monitors the resource utilisation and based on AVG values, it scales.
+
+
+Scheduled Scaling policy : 
+
+
+
+
+
+
+
+
+
+
 
 
 
