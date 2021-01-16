@@ -385,6 +385,73 @@ Target Tracking scaling policy : AWS Monitors the resource utilisation and based
 
 Scheduled Scaling policy : 
 
+_______________________________________________________________________________________
+
+D: 15/01/2021
+
+shared storage : EFS : Elastic FIle System : (File Share)
+Linux : EFS : Free Tier : NFS
+WIndows : FSx : NO Free Tier : SMB 
+
+--> EFS works with NFS v4.1/2 : Network File SYstem 
+--> No Pre-Provisioning
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-dbcc0a.efs.ap-south-1.amazonaws.com:/ /var/www/html/
+
+
+______________________________________________________________________________________
+
+D: 16/01/2021
+
+Programatic Access : AccessKeyID and SecretAccessKey..
+
+https://aws.amazon.com/cli
+
+aws --version
+
+aws configure		--> To Configure aws cli tools
+provide accesskeys, secretkey, defualt region and output format..
+
+aws s3 ls
+aws s3 ls s3://bucketname 
+aws s3 cp sourcepath destinationpath
+
+aws s3 cp s3://avinash/phptest.zip F:\test
+aws s3 sync source destination
+
+--debug
+
+Task : Launch an ec2 instance using cli.
+ami-id, subnet-group-id, security-group-id, keypair
+
+
+https://awsclibuilder.com/home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
