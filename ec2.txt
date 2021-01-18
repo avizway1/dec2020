@@ -427,6 +427,32 @@ ami-id, subnet-group-id, security-group-id, keypair
 
 https://awsclibuilder.com/home
 
+_____________________________________________________________________________________
+
+D: 18/01/2021
+
+AWS always recommened to use Roles instead of CLI. 
+
+We always prefers to go with Least Privilages mechanism in AWS. 
+
+Task : Create an + and upload it to an s3 bucket. 
+WHile launching an ec2 instance pass the userdata to make your ec2 instance as webserver and copy all webcontent from s3 bucket. 
+
+Task 2 : Install putty / apache, without login to ec2 instance.
+
+Task 3 : Recover windows instance password. (AWSSupport-RunEC2RescueForWindowsTool)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
