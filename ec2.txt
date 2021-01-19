@@ -443,6 +443,21 @@ Task 2 : Install putty / apache, without login to ec2 instance.
 Task 3 : Recover windows instance password. (AWSSupport-RunEC2RescueForWindowsTool)
 
 
+_____________________________________________________________________________________
+
+D: 19/01/2021
+
+Placement Groups :
+
+--> CLuster PG : low n/w latency & high n/w throughput 
+--> Partition PG : hadoop, kafka, cassandra.. distributed db..
+--> Spread PG : small group of instances.. reduces h./w failure effects.. 
+
+
+Virtualization type: hvm / PV
+
+Paravirtual : We need additional drivers to enable communication with h.w.. 
+HVM : Hw virtual machine : HAV : NO drivers req to communicate with h/w.
 
 
 
