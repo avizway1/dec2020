@@ -1,0 +1,87 @@
+AWS DNS service name is Route53.
+DNS works on Port 53
+
+DNS = Domain Naming system/service.. 
+
+Public IP : Unique for every resource we host over the internet. 
+
+FQDN to IP Address and vice versa.. 
+
+We need a Domain Name..?? 
+Domain Registrers : GODaddy, bigrock, web.com, freenom...
+
+Freenom.com : Gives a free domain name for everyone.. 
+
+IANA : RootZone Database.. 
+TLD : .com , .in , .us
+SLD : .co.in , .gov.in, .cal.us
+
+ICANN : Maintains the domain uniqueness.. 
+avinash.com --> WHoisdb 
+
+___________
+
+
+Godaddy / Freenom : You want to host that domain in AWS R53. 
+--> We need to create a HostedZOne in AWS first.
+--> We will get SOA/NS records. Grab the NS record names.
+--> COnfigure this NS records at DOmain Registerer (Godaddy/Freenom)
+
+** HostedZOne name should be same as Domain Name. 
+avinash.tk -- avinash.tk
+
+Public hosted zone : A public hosted zone determines how traffic is routed on the internet.. Across the globe..
+Private hosted zone : A private hosted zone determines how traffic is routed within an Amazon VPC.. WOrks within selected VPC.. 
+
+ns-900.awsdns-48.net
+ns-1686.awsdns-18.co.uk
+ns-1195.awsdns-21.org
+ns-146.awsdns-18.com
+
+
+***** For every HostedZOne we cost 0.50$/Month.. 
+
+A Record : Address Record.. Name <--> IP
+Alias Record : Available only in AWS.. We always use Alias with A in AWS.
+
+CNAME : Cananical Name : 
+TXT Record ; text Record
+MX : Mail Exchange record
+PTR Record : Pointer Record
+
+____________
+
+Routing policy : 
+
+Simple RP : 
+Weighted RP : 
+Latency RP : 
+Failover RP : 
+Geo Location RP : 
+Multivalue answer RP : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
