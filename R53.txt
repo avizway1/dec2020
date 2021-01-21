@@ -60,6 +60,8 @@ Failover RP :
 Geo Location RP : 
 Multivalue answer RP : 
 
+Onetime at project level..  3-5 Yrs.. You created records when req comes.. 
+
 
 
 
