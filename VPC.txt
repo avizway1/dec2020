@@ -1,0 +1,60 @@
+VPC : Virtual Private Cloud : Network resources in AWS.
+
+
+IPv4 : 32 bit : 2^32 IPs.. 
+IPv6 : 128 bit : 2^128 IPs.. 
+
+IPv4 : 
+Class A : 0 - 126
+Class B : 128 - 191
+Class C : 192 - 223
+
+Class D : 224 - 239 : Multicasting
+Class E : 240 - 255 : Future R&D
+
+
+Public IP : Unique across the globe.. We need to pay of you want to use this..
+Private IP : Unique with in the Network.. Free to use this.. For internal communication we use this..
+
+PRIVATE IP RANGES
+
+CLASS A: 10.0.0.0 to 10.255.255.255
+CLASS B: 172.16.0.0 to 172.31.255.255
+CLASS C: 192.168.0.0 to 192.168.255.255
+
+
+Class A : 16 Million hosts and 127 Networks : N.H.H.H  : 
+Class B : 65,000 Hosts and 16,000 Networks  : N.N.H.H  : 
+Class C : 254 Hosts and 2 Million networks  : N.N.N.H  : 
+
+cidr.xyx
+
+32-32	32-31	32-30	32-29	32-28	32-27	32-26	32-25	32-24	32-16	32-0
+
+/32	/31	/30	/29	/28	/27	/26	/25	/24	/16	/0
+
+2^0	2^1	2^2	2^3	2^4	2^5	2^6	2^7	2^8	2^16	2^32
+
+1	2	4	8	16	32	64	128	256	65536	4M
+
+
+Every NEtwork reservrs two IPs : 0 & 255 : -2
+
+But in AWS Environment : AWS Reservs 5 IPs : 
+2 : Network ID and Broadcost ID
+2 : DNS Servers
+1 : Future use
+
+/24 : 32-24 : 8 : 2^8 : 256 IPs : AWS reservs 5 : 256-5 : 251 USable IPs
+
+AWS Supports Subnet from /28 to /16
+Small Network : /28 : 16 IPs - 5 : 11 Usable IPs
+Latgest n/w : /16 : 65536 - 5 : 65531 Usable IPs
+
+
+
+
+
+
+
+
