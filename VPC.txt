@@ -1,3 +1,5 @@
+D: 22/01/2021
+
 VPC : Virtual Private Cloud : Network resources in AWS.
 
 
@@ -51,7 +53,63 @@ AWS Supports Subnet from /28 to /16
 Small Network : /28 : 16 IPs - 5 : 11 Usable IPs
 Latgest n/w : /16 : 65536 - 5 : 65531 Usable IPs
 
+____________________________________________________________________________________
 
+D: 23/01/2021
+
+Public Subnet : Instances are internet facing.. We can access Internet and We can access these resources over the internet.!!
+
+Private Subnet :  These instances are intenal resources.. THese resources show not access over the intenet..!!
+
+
+VPC Creation : Virtual Network..
+Default VPC : 
+--> Every region
+--> All subnets are Public SUbnets.
+--> We cannot choose the CIDR (Classless Inter Domain Routing). (IP Range)
+
+CUstom VPC : 
+--> We need to create this VPC.
+--> We can choose CIDR. 
+--> We can create Public SUbnets and Private Subnets.
+
+
+
+Step 1 : Navigate to VPC, Create VPC,
+
+VPC Name : CustomVPC, CIDR : 192.168.0.0/16, Tenancy: Default
+
+Step 2 : Create Subnets in our CustomVPC.
+
+--> Public SUbnet : ap-south-1a : 192.168.100.0/24
+--> Private Subnet : ap-south-1b : 192.168.200.0/24
+
+
+Step 3 : Create an Internet Gateway and Associate with "CustomVPC"
+*One VPC can contains one Internet Gateway.
+
+Step 4 : Create "Route Tables" for "Public Route" and "Private ROute"
+
+Local ROute : It Provides Internal Communciation between all our VPC subnets. 
+
+Create route table : Name :Public Route : Add a Route (0.0.0.0/0 --> InternetGW)
+Navigate to Subnet Associations : Select the "Public SUbnet"
+
+Create route table : Name :Private Route : Navigate to Subnet Associations : Select the "Private SUbnet".
+
+Step 5 : (Optional) : ENable "Auto Assign IP settings" for public SUbnet. 
+
+
+Jump Server / Bastian Host : Designed to connect to private subnet ec2 instance. 
+Jump server always runs in CustomVPC Public SUbnet.
+
+
+Task : Create VPC with 2 Public SUbnets and 2 Private SUbnets.
+
+1 public and 1 private
+
+1 Public ap-south-1a    1 Public Subnet ap-south-1b
+1 Private ap-south-1a    1 Private Subnet ap-south-1b
 
 
 
