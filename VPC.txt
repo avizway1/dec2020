@@ -112,6 +112,54 @@ Task : Create VPC with 2 Public SUbnets and 2 Private SUbnets.
 1 Private ap-south-1a    1 Private Subnet ap-south-1b
 
 
+_____________________________________________________________________________________
+
+D: 25/01/2021
+
+NAT Gateway : Designed to provide internet access to Private Subnet Resources.
+--> NAT Gateway always need to create in "CUstomVPC PublicSUbnet".
+--> We need to Generate an EIP while creating NAT Gateway.
+
+--> We need to add an ENtry with NAT in CUstomVPC PrivateSubnet Associated ROuteTable.
+(0.0.0.0/0 --> NATGateway).. NO Free TIer Eligibility..!!!!
+
+
+NAT Instance : FREE Tier Eligibility.. We don;t use this in Prod Env.. 
+--> THis is an EC2 Instance, NAT Purpose.. 
+--> SHould be launched in "CUstomVPC Public SUbnet"
+--> NAT Instance SG must be opened with http and https.
+--> SOurce/Destination Check should be disabled.**
+
+--> We need to add an ENtry with NAT in CUstomVPC PrivateSubnet Associated ROuteTable.
+(0.0.0.0/0 --> NATInstance)..
+
+
+Enable Logging on VPC : S3 / Cloudwatch logs
+--> VPC Level / SUbnet level / Instance level..
+
+
+How to ALlow / Deny traffic to a Subnet.!!
+
+How to enable communication between Multiple VPC.!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
