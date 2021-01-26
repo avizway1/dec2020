@@ -143,6 +143,66 @@ How to ALlow / Deny traffic to a Subnet.!!
 How to enable communication between Multiple VPC.!!
 
 
+________________________________________________________________________________________
+
+D: 26/01/2021
+
+
+NACL : Network ACLs : 
+--> It supports Allow / Deny opetions.
+--> It works at Subnet Level.
+--> One subnet can be member of one NACL at a time. 
+--> We must open Ephemeral ports. (Temp Ports). (1024-65535).
+--> We need to takes care about the inbound / outbound rules.
+--> Newly created NACLs Deny all the traffic. We must open req ports explicitly.
+
+--> Lowest rule number will have highest priority always.
+
+
+
+VPC Peering : 
+--> Enable communication between multiple VPCs.
+--> Requester amd accepter CIDR block should not be same.
+--> Req need to raise request and accpeter need to accept the conenction req.
+--> Requester and accepter, both need to update the route table accordingly.
+--> VPC Peering is Non-Transitive.
+
+
+	VPC 1 			VPC 2
+
+Region	Mumbai VPC ID		NV VPC ID
+	AWS Account 1 no	AWS Account 2 no
+ 	CIDR Block 		CIDR Block
+
+
+	vpc-079efb91140fba6f8	vpc-0c84f896a6c0bb6fe
+	ap-south-1		us-east-1
+	192.168.0.0/16		172.31.0.0/16
+
+
+Edit Requester's VPC ROute tbales with Accepter CIDR block and Vice Versa..
+
+Transit Gateway : https://www.youtube.com/watch?v=xyLlMBHy2wc
+VPN Connectivity : https://www.youtube.com/watch?v=JSTyjISscNg
+
+
+https://cloud.google.com/files/CloudVPNGuide-UsingCloudVPNwithAmazonWebServices.pdf
+https://cloudmonix.com/blog/connect-amazon-vpc-to-azure/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
