@@ -1,0 +1,43 @@
+RDS : Relational Database Service : AWS SUpports 6 RDS DB engines.
+--> Amazon Aurora (Mysql / Postgresql compatable) : 
+--> Microsoft SQL : SSMS (Sql server Management studio)
+--> Mysql (Mysql Workbench)
+--> postgresql (pgadmin)
+--> oracle (oet / Toad)
+--> mariadb (workbench)
+
+--> DMS : Database Migration service : On-Prem db to aws.
+--> NoSQL (Serverless) : DynamoDB
+--> Datawarehousing : Amazon RedShift
+
+
+Mysql
+License : 
+--> General -Public License
+--> License Included
+--> BYOL (bring your own license)
+
+db.t2.micro : DB Instance --> 
+
+SOP DOcument : Standard Operational Procedure 
+
+Max Backup retention period : 35 Days
+Min : 1 
+Default : 7 Days
+
+We won't get any IP address for the DB to connect.. We will get Endpoints..!!!
+
+
+Task : Launch MYSQL RDS Instance, COnnect to it.
+
+Task : Launch MSSQL RDS Instance, COnnect to it. (SSMS Download)
+
+
+
+
+
+
+
+
+
+ 

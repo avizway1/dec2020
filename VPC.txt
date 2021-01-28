@@ -189,6 +189,27 @@ VPN Connectivity : https://www.youtube.com/watch?v=JSTyjISscNg
 https://cloud.google.com/files/CloudVPNGuide-UsingCloudVPNwithAmazonWebServices.pdf
 https://cloudmonix.com/blog/connect-amazon-vpc-to-azure/
 
+________________________________________________________________________________________
+
+D: 27/01/2021
+
+ENdpoints : 
+Gateway Endpoints  : S3 and DynamoDB
+Interface endpoints :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
