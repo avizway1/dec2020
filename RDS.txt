@@ -33,6 +33,95 @@ Task : Launch MYSQL RDS Instance, COnnect to it.
 Task : Launch MSSQL RDS Instance, COnnect to it. (SSMS Download)
 
 
+____________________________________________________________________________________
+
+D: 29/01/2021
+
+MultiAZ Deployment :
+--> Disaster Recovery Solution for RDS instances.
+--> THis feature cost us double the price. 
+--> When we enable this feature, Another copy of our RDS instance runs in another AZ.
+--> MultiAZ not used for Scaling. 
+
+ReadReplica :
+--> Designed for Scaling purpose.
+--> For readReplcia we will get another Endpoint, Using this endpoint we can offload the read operations from the primary db.
+--> We can create readreplica in ANother Region, if required.
+--> If something happens to Primary, ReadReplcia operations won't effect.
+
+--> In future, if we want to break the replication, We can Promote the "Read Replica.'
+--> Once replication breaks, we cannot reestablish it.
+--> However, if required we can create a Another readreplica.
+--> We will use ReadReplicas to take Snapshots of Prod Databases. (No I?O freazes for Write operations)
+
+_______________________________________________________________________________________
+
+D: 01/02/2021
+
+RDS : We manage backups of RDS using Snapshots.
+--> Snapshots are PITR (Point in Time Recovery).
+--> In Place Restortion is not possible.
+--> We can restore from the Snapshots, But we will get a New RDS Endpoint.
+--> We can copy to another region and we can launch an RDS instance.
+--> We can Share this sna[pshots with another AWS acocunt user. We can even make it public.
+
+--> Automated Snapshots / System Snapshots : Creates automatically, if we enable "Automated Backups" while launching RDS instances.
+--> We cannot delete these system Snapshots.
+--> If we delete RDS instance, these deletes autimatically.
+--> Max Backup retention period is 35 Days. 
+
+--> Manual Snapshots : We need to create manually, We delete manually.
+
+percona XtraBackup : 3rd party backup service.. Upload it to s3 bucket.. Restore from s3..
+
+https://aws.amazon.com/rds/proxy/
+
+AWS Secrets Manager : Store RDS secrets. (No username and password Hardcoding required)
+
+
+________
+
+DynamoDB : Serverless architecture : 
+--> Single digit millisecond latency at any scale.. 
+
+Task : 
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
