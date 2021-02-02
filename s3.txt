@@ -1,276 +1,65 @@
-____________________________________________________________________________________
+https://github.com/avizway1/jan2021
 
-D: 19/12/2020
+https://join.slack.com/t/awswithavinash/shared_invite/zt-lnidepdv-RV4ODyh7jC9x_u3YK4jBYQ
 
-S3: SImple Storage Service : 
+Block Based Storage : Used/designed to run the OS. : Servers : EBS/InstanceStore : EC2
 
-object based storage : Store the flat files (.pdf.docx.exe.msi).. We cannot install OS/Run any applications.. : S3
+Object Based Storage : Designed to store the objects.. We cannot install anything.. We cannot run any Applications / OS.. : Store any file format.. : Gdrive/Dropbox/onedrive
+: S3
 
-Block Based Storage : Designed to run OS.. EBS / Instance Store..
+Network Based Storage : Storage over the network.. SAN/NAS : EFS & FSx
 
-Storage Over Network : SAN/NAS.. We 'll have storage within the network.. We can mount it servers.. : EFS / FSx
+S3 : Simple Storage Service : 
+--> We have Buckets. We can store all the data in buckets.
+--> Bucket name should be unique across the globe.
 
+S3 Bucket Naming limitations:
+--> Min Char 3, Max 63 Char..
+--> Should not contains Capital Letters
+--> Should not start with .
+--> Should not end with .
+--> No Adjesent ..
+--> Should not resemble IP Address Format
 
---> We store all the data in Buckets.
---> Bucket = Directory / Folder with Unique name space. 
---> Bucket name must be unique across the globe.
---> Bucket naming limits (COmply DNS Naming standards)
-	--> Min 3 char.. Max 63 Char
-	--> Name should not start with . 
-	--> Name should not end with .
-	--> No Adjesent ..
-	--> SHould not Resemble IP address format
-	--> No Capital letters.. 
-	--> Should not start with xn--
-
---> IAM and S3 is a Global Platform, Doesn't required to choose the region.
---> But whenever we are cretaing a bucket, We need to choose the region.
---> We store all the objects in Bucket.
-
-
-Block public access (bucket settings) --> Must be turned off to make any object public.
-
-If we don;t have . in bucketn name..
-Syntax : https://bucketname.s3.regioncode.amazonaws.com/objectname
-
-If we have . in bucketn name..
-Syntax : https://s3.regioncose.amazonaws.com/bucketname/objectname
-
-
-
-S3 Storage Classes
-
-S3 Standard : availability : 99.99% , Durability : 99.999999999 %.. Frequently accessed data..   >= 3 AZs.. 
-
-Standard-IA : availability : 99.9% , Durability : 99.999999999 %.. Designed to store Infrequently accessed data.. Data will be available immediatley..  >= 3 AZs.. 
-
-Onezone-IA : availability : 99.5% , Durability : 99.999999999 %.. Designed to store Infrequently accessed data, non-critical data.. Data will be available immediatley..  1 AZs.. 
-
-Glacier : TO archieve data for longer durations.. We cannot view the data immedialtly.. We need to retrive the data..  Long-term data archiving with retrieval times ranging from minutes to hours.. >3 AZs
-
-Glacier Deep Archieve : TO archieve data for longer durations.. We cannot view the data immedialtly.. We need to retrive the data.. Long-term data archiving with retrieval times within 12 hours.. >3 AZs
-
-Intelligent Tier : Long-lived data with changing or unknown access patterns.. If we are not sure to choose the storage class.. 
-
-RRS (Reduced renduncy storage) : Durability is less.. 99.99%.. Not recpmmended.. Easily reprodusable data.. Non-Mission critical data.. 
-
-https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html
-
-________________________________________________________________________________________
-
-D: 21/12/2020
-
-
-https://join.slack.com/t/awswithavinash/shared_invite/zt-ka9bd5ki-3ZS5DlrRVXY6_qnmS4eJ4Q
-
-https://github.com/avizway1/dec2020
-
-
-Versioning : 
---> It keeps all the versioned objects.
---> Upload time is matter here.
-
-Versioning : HIDE
---> If we accidentally delete the object, We will get "DELETE Marker". We can delete the DM to get the object back.
-
-Versioning : SHOW
---> If we delete any Object, It deletes perminently. We cannot get the object back.
---> If we want to delete any SPecific version, Set Version:SHOW, then delete.
-
-
-
-Lifecycle Management Rule : 
-
-
-Free Tier : 5 gb Standard Storage Class.. 
-2000 PUT (Upload)
-20,000 GET (Download)
-
-
-_____________________________________________________________________________________
-
-D: 22/12/2020
-
-CRR / SRR : Cross Region Replication / Same Region Replication : 
-
---> Before enableing CRR/SRR, WHatever the data we have, that doesn'r replicate automatically. All future / subsequent uploads will replicate.
-
---> aws s3 sync sourcebucket destinationbucket
-
-
-MFA Delete on S3 Bucket : TO add additional layer to delete object.
-
-
-Tags : Customer provided metadata. 
-Project Name : Project X
-
-
-Intelligent-Tiering Archive configurations : It moves the data to Archive / Deep Archive automatically if data is not accessed in last 90 days / 180 Days.
-
-Server Access Logging : Won't use this..!!! : Enable logging on one s3 bucket. 
-
-
-Event notifications : 
---> SQS
---> Lambda
---> SNS (SImple Notification Service)
-
-
-SNS : Create a Topic : Add subscribers --> Configure this SNS on S3 bucket.
-** SNS topic and S3 Bucket should be in same region.
-
-
-Task : COnfigure Same Region Replication on S3.
-
-Task 2 : COnfigure Notifications if an object is deleted.
-
-Task 3 : Configure a billing alarm on your aws account with the created SNS topic.
+Free Tier : S3
+--> 5 Gb Standard Storage.. 
+--> 2000 PUT Operation / 20,000 GET Operations
 
 ______________________________________________________________________________________
 
-D: 24/12/2020
-
-Encryption : 
-
-In-Transit Encryption : SSL / TLS 
-
-
-Server Side Encryption (SSE) / At-Rest : AWS Responsibility..
-
---> SSE-S3 : S3 Generatres and manages the keys to encrypt and decrypt the data. Who ever have S3 access they can decrypt the data.
-
---> SSE-KMS : Key Management Service : 
-	aws/s3 : KMS generates and manages the Key and Key Material. WHoever have access 		on s3, they can encrypt/decrypt the data. * FREE TIER (20k req/Month)
-KMS-CMK : Customer managed keys : Using KMS customer need to generate the 			encryption keys.. KMS manages the key and key material.. **NO FREE TIER
-Whoever want to decrypt the data, he needs permission on encry key.
-
-Symmetric : A single encryption key that is used for both encrypt and decrypt operations.
-Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
-
---> SSE - C (Client Provided) : We need to upload the key material to kms and KMS manages the Key material and encrypts the data.
-
-
-Key Creation: Choose Symmetric / Asymmetric : Symmetric
-Key ALias and Descryption
-Key administrators : Who can manage the Key.
-key usage permissions : Who can use this key.  : 
-
-
-
-Client SIde Encryption :  
---> Customer Not ready to share/upload his key material to AWS.
---> Whoever don;t want to Send any unencrypted data to s3.
---> AWS not responsible for tis CSE.
-
-
-
---> We can create only 100 buckets. (Soft Limit)
-
-________________________________________________________________________________________
-
-D: 25/12/2020
-
-
-Transfer acceleration : **NO FREE TIER : 
-
-Object Lock : 
---> For existing bucket we cannot enable Object lock. If required We need to contact aws.
---> Versioning must be enabled to use obkect lock.
-
-Governance : Users with specific IAM permissions can overwrite or delete protected object versions during the retention period.
-
-Compliance : No users can overwrite or delete protected object versions during the retention period.
-
-Requester pays : Instead of bucket owner, whoever access the data, he needs to pay / we'll get charged for the data transfer and requests.
-
-
-Static website hosting : We can host a static website using s3 bucket.
---> DOmain Name = Bucket Name
-
-Http STatus Codes :
-2XX : OK / SUccess
-3XX : Redirection 
-4XX : CLient Side Error
-5XX : Server Side Error
-
-Metrics : 
---> Cloudwatch : Monitoring service on AWS. 
---> CW gives metrics/graphs on resources.
---> 
-
-
-_______________________________________________________________________________________
-
-D: 26/12/2020
-
-https://www.udemy.com/course/linuxwithavinash/?couponCode=DEC202
-
-https://www.udemy.com/course/jenkinswithavinash/?couponCode=DEC202
-
-https://www.udemy.com/course/gitbyavinash/?referralCode=F7D62CDB4D61EADE1CC7
-
-
-Bucket Policies : JSON Format.
---> We can manage permissions at Resource level. 
-
-
-ACL : 
-Public ACcess : 
-ANother AWS Acount user :S3 Cananical ID required to share with another AWS Account users. 
-Log Delivery group
-
-
-IAM User : avinash : Deny Upload Object to Avinash121 bucket..??
-
-
-https://awspolicygen.s3.amazonaws.com/policygen.html
-
-
-Effect : ALLOW / DENY			: Deny
-Principal : TO an IAM User arn	 	: arn:aws:iam::518084852393:user/avinash
-Actions : What operation want to deny	: PutObject (Upload)
-Amazon Resource Name : on what s3 buck	: arn:aws:s3:::avinash121/*
-
-s3 bucket : 
-Bucket level operation Just give Bucket ARN : arn:aws:s3:::avinash121
-Object level operation we need to add *		: arn:aws:s3:::avinash121/*
-
-
-Import / Export : 
-Snow Family deviuces :
-	--> SnowCOne : 8 TB
-	--> Snowball edge : 42TB / 100TB 
-	--> Snow Mobile : PB scale container  : 1 Pb data with 1gbps.. 23-25 Years
-
---> AWS Direct Connect : We can establish dedicated connectivity between AWS regions and On-Premise.
-
-
-3rd Party Apploication : Cloudberry explorer / S3 Browser / WinSCP / Cyberduck..!!
-
-
-___________________________________________________________________________________
-
-D: 30/12/2020
-
-Peformance : Prefix 
-
-3500 PUT / Uploads per prefix
-5500 GET / Downloads per prefix
-
---> Add randomness in the Object names and Prefixes.. 
-
-
-
-
-
-
-
-
-
-
-
-
-
+D: 01/02/2021
+
+--> S3 : No Pre-Provisioning required.
+--> We will get charged based on the data we actually stored.
+--> Based on ACcess Patterns we need to choose the right storage class.
+
+S3 Standard : Frequently Accessed Data : AZs >= 3 data spreads in backend.. 
+Availability : 99.99%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+S3 Standard-IA : Less Freq accessed data..   AZs  >=3 AZs.. 
+Availability : 99.9%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+OneZone-IA : Less Freq accessed data..   AZs -->  1 AZs.. 
+Availability : 99.5%  Durability : 99.999999999 (11 9s).. 
+Data availbale immediatly.. 
+
+Glacier : Archive the data.. AZs  >=3 AZs.. 
+Data will not be availbale immediatly.. Initialise data restoration to view the data.. 
+Restoration : Min- Hrs...  
+(Standard Restore/retrival : 3-5 Hrs
+Expedited Restore/retrival : 1-5 Min (Less than 250 mb)
+Bulk restore : Hrs 5-12 Hrs)
+
+Glacier Deep Archieve: Archive the data.. AZs  >=3 AZs.. 
+Data will not be availbale immediatly.. Initialise data restoration to view the data.. 
+Restoration : Hrs... 
+
+Intelligent tier : If we have unknown access patterns for our data.. Long-lived data with changing or unknown access patterns... AZs  >=3 AZs.. 
+
+Reduced redundancy Storage : RRS : Not Recommanded..!!
+Durability : 99.99%.. 
 
 
 
