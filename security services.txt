@@ -1,0 +1,66 @@
+D: 03/02/2021
+
+Amazon Inspector :
+--> An agent runs in our ec2 instances.
+--> We can install agent manually / using SSM Run command.
+--> We can evaluate our ec2 instances with required rules.
+	--> CIS Benchmarks (Centre for Internet Security)
+	--> Network rechability
+	--> Security Best practices
+	--> COmmon vulnarability
+--> We can run the assesment on all our ec2 instances / Pick instance using Tags.
+__
+
+Amazon Certificate Manager / ACM : 
+
+--> http:80 : No adidtional things required.. 
+--> https: 443 : SSL/TLS (Secure Socket Layer / Transport Layer security)
+--> AWS gives a Free SSL certificate. Verified /signed by AWS.
+
+https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
+
+__
+
+AWS Trusted Advisor : 
+--> Cost Optimization
+--> Performance
+--> Security
+--> Fault Tolerance
+--> Service Limits
+
+__________________________________________________________________________________
+
+D: 04/02/2021
+
+Cloudfront : AWS CDN (Content Delivery Network) Service.. PoP locations of AWS..
+
+Invalidation : It clers the cached data from edge locations. and sends the latest/updated data.
+
+
+Task : Draw the task diagram in draw.io
+
+Task : Add CLoudfront distribution on top of Wordpress task.
+
+Task : Launch an ec2 instance, make it as webserver, Add ELB on top of it.. Deliver the ec2 instance website via Cloudfront distribution.
+
+
+WAF : Web Application firewall : Adds an additional security layer to Cloudfront distribution / Application ELB / API Gateway / AppSync..
+
+Shield : Protect AWS resources from DDoS attacks. 
+
+cloudtrail and config : 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
