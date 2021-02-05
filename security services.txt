@@ -48,7 +48,50 @@ WAF : Web Application firewall : Adds an additional security layer to Cloudfront
 
 Shield : Protect AWS resources from DDoS attacks. 
 
-cloudtrail and config : 
+
+____________________________________________________________________________________
+D: 05/02/2021
+
+cloudtrail : CloudTrail logs all the user activity and api calls happens on our aws env.
+--> Enabled by defaultly, It stores last 90 days activities.
+--> If we want to store for unlimited days, We can create a Trail to an s3 bucket.
+--> We can enable Cloudtrail Trails at Organisation level also. 
+--> Enterprise level : We will maintain a dedicated acocunt to store the logs of multiple AWS accounts.
+--> If any external auditor visits / Security audit.. Provide access on S3 Bucket where org logs are stored.
+
+
+Trail Name : 
+Management events : Capture management operations performed on your AWS resources.
+Data events : s3 & Lambda : Log the resource operations performed on or within a resource.
+Insights events : Identify unusual activity, errors, or user behavior in your account.
+
+--> We can use Amazon Athena to analyze the Cloudtrail logs.
+
+We have SCP (Service Control Policy) to manage permissions at AWS Organisations level.
+
+NO FREE TIER ELIGIBILITY
+Amazon COnfig :  We can create COnfig rules to verify the organisations Compliance requirements.  (Inventory Service in AWS)
+https://cloudcustodian.io/docs/aws/gettingstarted.html
+
+__________________
+
+SQS : SImple Queue Service : Messege Quing service: 
+
+Max Msg size : 256 KB    (4 requests).. 1 chunk = 64 kb.. 
+Messege retention : 14 Days
+
+https://aws.amazon.com/sqs/faqs/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
