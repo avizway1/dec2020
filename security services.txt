@@ -83,6 +83,43 @@ Messege retention : 14 Days
 https://aws.amazon.com/sqs/faqs/
 
 
+______________________________________________________________________________________
+
+D: 08/02/2021
+
+Cloud9 : IDE within Browser.. (Netbeans, eclips, VS COde)
+
+Lambda : Serveless Architecture.. 
+Node.js, .net core, go, ruby, python, Java 11
+
+https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
+https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
+
+
+MyCanaryFunction-role-fuyex2um
+
+Cloudwatch Events now AWS Events bridge: 
+
+How to increase labda memory.?
+Navigate to basic Settings.. Default 128 MB, MAx : 10240
+
+Increase/provide addiitonal services permissions for lambda function..?
+Grab the Lambda function execution role name.. navigate to IAM and associate policy..!!
+
+Can we run labda within a vpc.? How..?
+Yes.. FOr labda Execution role, we must add a policy "AWSLambdaVPCAccessExecutionRole".
+
+
+Task : Try all the 3 lambda fucntions..!!!
+
+Add an eventbridge to stop instances at MON-FRI at 05:00 PM Given instances need to stop
+MON-FRI morning at 09:00AM Instances need to start.. 
+
+
+
+https://cdkworkshop.com/
+
+
 
 
 
