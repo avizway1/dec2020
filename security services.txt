@@ -115,18 +115,38 @@ Task : Try all the 3 lambda fucntions..!!!
 Add an eventbridge to stop instances at MON-FRI at 05:00 PM Given instances need to stop
 MON-FRI morning at 09:00AM Instances need to start.. 
 
+_____________________________________________________________________________________
 
+D: 09/02/2021
 
 https://cdkworkshop.com/
+TO have your local IDE with CDK (Cloud Development Kit)..
+Step 1 : Install Visual Studio
+Step 1 : Install Node.js
+Step 2 : npm install -g aws-cdk   (cdk --version)
 
 
+cdk init
+cdk bootstrap
+cdk synth		
+cdk deploy
+
+______________
+
+CloudFormation : IaaC : 
+--> Create a stack and deploy it.
+--> JSON
+--> YAML
 
 
+aws console recorder
 
 
+https://containersfromthecouch.com/
+https://ecsworkshop.com/
+https://eksworkshop.com/
 
-
-
+cicd
 
 
 
