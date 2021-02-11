@@ -146,7 +146,90 @@ https://containersfromthecouch.com/
 https://ecsworkshop.com/
 https://eksworkshop.com/
 
-cicd
+______________________________________________________________________________________
+
+D: 10/02/2021
+
+ECR : Elastic Container Registry/repository : Create docker images and store it. 
+Docker hub is public docker repo. ECR is a private repo.
+
+ECS : Elastic Continer Service : Ec2 mode and Fargate Mode.. 
+EKS : Elastic Kubernetis Service 
+
+
+CICD : 
+
+
+______________________________________________________________________________________
+
+D: 11/02/2021
+
+SMS : 
+--> Vmware/hyper-v : SMS (Server Migration Service) : Deploy an OVF in vmware/hyperv:  
+https://www.youtube.com/watch?v=Vx9lRRY-shg
+
+--> Azure to AWS : We can deploy aws connector in azure : 
+https://www.youtube.com/watch?v=bdaHMRqCBkg
+
+--> GCP/On-Premise : Cloudendure.. 
+https://console.cloudendure.com/#/register/register
+https://www.youtube.com/watch?v=8xf1RpPdcHs
+
+
+Storage gateway: SG is a VM runs in our OnPremises environment.. Establishes the hybrid environment.
+--> IT caches the data in OnPrem.. 
+https://www.youtube.com/watch?v=wmcBSHpoHhs
+
+File gateway : Store files as objects in Amazon S3, with a local cache for low-latency access to your most recently used data.
+
+Volume gateway : Block storage in Amazon S3 with point-in-time backups as Amazon EBS snapshots.
+	--> Cached volumes :Low-latency access to your most recently used data.
+	--> Stored volumes :On-premises data with scheduled offsite backups.
+
+Tape gateway : VTL (Virtual Tape Library) : (veeam backup / 3rd party backup application)..  Back up your data to Amazon S3 and archive in Amazon S3 Glacier using your existing tape-based processes.
+
+___
+
+Security : AWS Follows shared security responsbility mechanism.. 
+--> Security OF the Cloud : AWS Responsible
+--> Security IN the Cloud : Customer responsible
+
+___
+
+TCO : Total cost of ownership : 
+AWS Pricing calc : 
+
+https://calculator.aws/
+https://calculator.s3.amazonaws.com/index.html
+
+Using cloudwatch : We can monitor cpu, network, disk, status checks.. But not Memory usage.. 
+For memory : Defualt metric won;t support.. We need to use CUstom Metric..!!
+Basic Monitoring : 5 Minutes interval
+Detailed / Enhanced Monitoing : 1 Minute interval.. 
+
+--> https://www.youtube.com/watch?v=Fe2mEkWiNSA  (COST US)
+
+___
+
+Directory Services : 
+--> SAML (integrates with corporate AD)
+--> AWS SSO (Single Sing-On) : Identity Provider (SSO / Active Directory)
+
+How to create Directory : https://www.youtube.com/watch?v=RDlBoAHVmZs
+AD Connector : https://www.youtube.com/watch?v=Ca259gg6SoM
+Join Linux to domain : https://www.youtube.com/watch?v=LWi9-XL2vWQ
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
